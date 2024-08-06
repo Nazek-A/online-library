@@ -1,0 +1,412 @@
+.container-fluid {
+    background-color: #fff;
+    border: none !important;
+}
+
+.dropdown {
+    position: static;
+}
+.dropdown-menu {
+    width: 100%;
+    text-align: center;
+}
+.dropdown-menu>li {
+    display: inline-block;
+}
+
+.hours ul {
+    border: none;
+    background-color: #F7F5F5;
+    width: 100%;
+    z-index: 1001;
+}
+.hours .vl {
+    border-left: 1px solid rgb(0, 0, 0, 22%);
+    height: 50px;
+}
+.hours ul h3 {
+    color: #207798;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-item,
+.navbar .btn.dropdown-toggle {
+    color: #207798 !important;
+    text-transform: uppercase;
+}
+.dropdown-menu .dropdown-item,
+.hours .dropdown-menu,
+.hours .dropdown-menu .dropdown-item {
+    color: black !important;
+}
+
+.TransNav {
+    background-color: rgba(32, 119, 152, 0.5); /* Adding transparency */
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    /*top: 9%;*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    margin-top: 90px !important;
+}
+
+.TransNav h1,
+.TransNav h6 {
+    margin: 0;
+    padding: 5px 0; /* Adding padding between the text elements */
+}
+
+.imgDiv {
+    position: relative;
+}
+
+.imgDiv img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries for responsiveness */
+/* @media (max-width: 768px) {
+    .TransNav {
+        top: 20.3%;
+        padding: 20px;
+    }
+
+    .TransNav h1 {
+        font-size: 1.5rem;
+    }
+
+    .TransNav h6 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .TransNav {
+        top: 28%;
+        padding: 10px;
+    }
+
+    .TransNav h1 {
+        font-size: 1.2rem;
+    }
+
+    .TransNav h6 {
+        font-size: 0.9rem;
+    }
+} */
+
+/* About us */
+.heading1 {
+    color: #207798;
+  }
+  
+  .paragraph {
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .cards {
+    gap: 20px; /* Add space between cards */
+  }
+  
+  .card1 {
+    background-color: #BDA58B;
+  }
+  
+  .cardparagraph {
+    font-size: 15px;
+  }
+  
+  .card2 {
+    background-color: #555555;
+  }
+  
+  .card3 {
+    background-color: #207798;
+  }
+  
+  /* Media Queries for responsiveness */
+  /* @media (max-width: 991px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .AboutUs {
+        margin: 20px;
+    }
+  } */
+  
+   /* QUICK ACCESS */
+  
+   .nav-item a {
+    color: #207798;
+    font-weight: bold;
+}
+
+.divcoll {
+    background-color: rgba(85, 85, 85, 0.08);
+    min-height: 700px; /* Adjusted to min-height for better responsiveness */
+    padding: 20px; /* Added padding for spacing */
+}
+
+/* Tabs default color */
+.nav-item a {
+    color: black; /* Default color */
+    font-weight: bold;
+}
+
+/* Tabs active color */
+.nav-item .nav-link.active {
+    color: #207798; /* Color when the tab is active */
+    border-color: #207798; /* Change border color to match active color */
+}
+
+.link{
+    color: #207798;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    .divcoll {
+        height: auto; /* Allow div to adjust height dynamically */
+    }
+
+    .collection {
+        padding: 15px; /* Add padding for smaller screens */
+    }
+
+    .heading1 {
+        font-size: 1.5rem; /* Smaller font for smaller screens */
+    }
+
+    .nav {
+        flex-direction: column; /* Stack tabs vertically on small screens */
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Add space between vertically stacked tabs */
+    }
+
+    .tab-content {
+        margin-top: 20px; /* Adjust space between tabs and content */
+    }
+
+    .lead.fs-6 {
+        font-size: 1rem; /* Adjust font size for readability on smaller screens */
+    }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons .d-flex {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 0; /* Removes bottom margin to align text vertically */
+}
+.divright{
+  margin-top: none;
+}
+
+.divright {
+  margin: 0; /* Removes all margins */
+}
+
+.aboutfooter{
+  color: #207798;
+
+}
+
+.pp{
+  font-size: small;
+  padding: 6px;
+  margin-right: 5px; /* Adjust the spacing between the image and text */
+
+}
+
+.footer a{
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* bottom section */
+.hr{
+  color: #555555;
+}
+
+.header6{
+  color: #555555;
+}
+
+/* Category */
+.card-header {
+    background-color: #207798;
+}
+.card-header a {
+    text-decoration: none;
+    color: #fff;
+}
+/* Books */
+.categories {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    width: 20%; 
+    height: calc(100vh - 80px);
+    overflow-y: auto; /* Add a scrollbar if the content exceeds the viewport height */
+    background-color: #fff; 
+    z-index: 1000; 
+    padding: 0;
+}
+
+/* categories text color */
+.categories .navbar-nav .nav-item .nav-link{
+    color: #555555 !important;
+    text-transform: capitalize;
+}
+.card-container {
+    margin-left: 25%;
+    width: 75%; 
+    padding-top: 80px; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookHeading{
+    color: #207798;
+}
+
+.searchInp{
+    width: 500px;
+}
+
+.SBtn:hover{
+   background-color: #207798;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-section h4 {
+        margin-bottom: 10px;
+    }
+
+    .header-section form {
+        width: 100%;
+    }
+
+    .header-section .searchInp {
+        height: 40px;
+        width: 75%;
+        margin-top: 10px;
+    }
+
+    .header-section .SBtn {
+        height: 40px;
+        width: 25%;
+        margin-top: 10px;
+    }
+}
+.categories .navbar-nav .nav-item .nav-link {
+    color: #555555 !important;
+    font-weight: lighter !important;
+}
+
+.categories .navbar-nav .nav-item .nav-link.active {
+    color: #207798 !important;
+    font-weight: bold !important;
+}
+/* Borrow Book  */
+
+.textBorrowHeader{
+    color: #207798;
+  }
+  
+  .textBorrowBody{
+    color: #555555;
+    font-size: medium;
+  }
+  
+  .lables{
+    color: #207798;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+  .form-inputs{
+    border: none;
+    background-color: rgba(85,85,85, 0.05);
+    padding: 10px; /* Add padding if not already present */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .submitBTN{
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #207798;
+    border: none;
+    border-radius: 3px;
+    padding: 0%;
+  }
+  
+  .back{
+    background-color: #207798;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 9px;
+  }

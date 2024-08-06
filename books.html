@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QIU Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="border-bottom">
+        <nav class="navbar navbar-expand-lg mx-5 fw-bold " style="z-index: 1002;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/qiu.png" alt="Logo" width="200" height="55" class="d-inline-block align-text-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#aboutus">About US</a></li>
+                        <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+                        <!--  <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collections</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Rules & Regulation</a></li>
+                                <li><a class="dropdown-item" href="#">E-Library</a></li>
+                                <li><a class="dropdown-item" href="#">Services</a></li>
+                                <li><a class="dropdown-item" href="#">Faculties</a></li>
+                            </ul>
+                        </li> --> 
+                        
+                    </ul>
+                    <div class="hours dropdown d-flex align-items-center">
+                        <a class="btn dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/clock.png" width="20" height="20"> Hours
+                        </a>
+                        <ul class="dropdown-menu mx-0">
+                            <h3 class="text-center fw-bold">Library Opening Hours</h3>
+                            <div class="d-flex justify-content-between align-items-center m-4">
+                                <li class="text-center">
+                                    <h5 class="dropdown-item fw-bold">Sunday - Wednesday</h5>
+                                    <h5 class="dropdown-item">8:15 AM - 3:45 PM</h5>
+                                </li>
+                                <li class="vl"></li>
+                                <li>
+                                    <h5 class="dropdown-item fw-bold">Thursday</h5>
+                                    <h5 class="dropdown-item">8:15 AM - 2:45 PM</h5>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="d-flex">
+
+    <!-- category navbar -->
+        <nav class="categories navbar ms-5 border-end">
+            <ul class="navbar-nav">
+                <h4 class="text-secondary">CATEGORIES</h4>
+                <li class="nav-item" id="dentistry-nav"><a class="nav-link" href="pages/dentistry.html">Dentistry</a></li>
+                <li class="nav-item" id="pharmacy-nav"><a class="nav-link" href="pages/pharmacy.html">Pharmacy</a></li>
+                <li class="nav-item" id="medical-lab-technology-nav"><a class="nav-link" href="pages/medical-lab-technology.html">Medical Lab Technology</a></li>
+                <li class="nav-item" id="medical-image-nav"><a class="nav-link" href="pages/medical-image.html">Medical Image</a></li>
+                <li class="nav-item" id="optometry-nav"><a class="nav-link" href="pages/optometry.html">Optometry</a></li>
+                <li class="nav-item" id="biomedical-engineering-nav"><a class="nav-link" href="pages/biomedical-engineering.html">Biomedical Engineering</a></li>
+                <li class="nav-item" id="software-nav"><a class="nav-link" href="pages/software.html">Software Engineering</a></li>
+                <li class="nav-item" id="network-security-nav"><a class="nav-link" href="pages/network-security.html">Network & Security</a></li>
+                <li class="nav-item" id="information-technology-nav"><a class="nav-link" href="pages/it.html">Information Technology</a></li>
+                <li class="nav-item" id="computer-science-nav"><a class="nav-link" href="pages/computer-science.html">Computer Science</a></li>
+                <li class="nav-item" id="human-resource-nav"><a class="nav-link" href="pages/human-resource.html">Human Resource</a></li>
+                <li class="nav-item" id="management-nav"><a class="nav-link" href="pages/management.html">Management</a></li>
+                <li class="nav-item" id="pap-nav"><a class="nav-link" href="pages/pap.html">PAP</a></li>
+                <li class="nav-item" id="english-nav"><a class="nav-link" href="pages/english.html">English</a></li>
+                <li class="nav-item" id="kurdish-nav"><a class="nav-link" href="pages/kurdish.html">Kurdish</a></li>
+            </ul>
+        </nav>
+        
+
+            <div class="card-container flex-grow-1 p-3">
+                <div class="header-section d-flex justify-content-between align-items-center mb-3">
+                    <!-- search -->
+                    <h4 class="bookHeading mb-0">Books</h4>
+                    <form class="d-flex" role="search">
+                        <input class="searchInp form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="SBtn btn btn-outline-secondary" type="button" onclick="searchCards()">Search</button>
+                    </form>
+                </div>
+    
+                <div id="cards" class="d-flex flex-wrap justify-content-lg-start justify-content-md-center justify-content-sm-center justify-content-center">
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/dentalHydiene.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Dental Hydiene</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/dAnatomy.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Anatomy for Dental Students</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/dAssisting.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Dental Assisting</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/dClinic.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Dental Clinic</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/cs1.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Algorithms to Live</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/ph2.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Aulton's Pharmaceutics</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/mimage1.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">The Essential Physics of Medical imaging </p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/o1.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Clinical Anatomy and Physiology</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/o2.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Clinical Manual of Contact lenses</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/o3.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Clinical Ophthalomogy</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/o4.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">HUMAN EYE</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/o5.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Practice Management in Optometry</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/n1.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Network Security Essential</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/n2.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Data Communications & Networking</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/n3.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">CISCO CCNA COMMAND GUIDE</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/lab1.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Clinical Laboratory Science</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/lab2.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Clinical Hematology</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/lab3.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Blood Banking and Transfusion Practices</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/lab4.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Medical Laboratory Technology</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/mimage2.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Medical Imaging</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/mimage3.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Practical Imaging Informatics</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/mimage4.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Medical Imaging</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/mimage5.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Introduction to Medical Imaging</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/ph3.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Pharmacy Student Survival Guide</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/ph4.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Applied Biopharmaceutics and Pharmacokinetics</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/ph5.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Pharmaceutical analysis</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/ph1.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Pharmacy Mangement</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/dInstruments.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Basic guide to dental instruments</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/dRadio.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Dental Radiography</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/be1.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Biomedical Engineering</p>
+                        </div>
+                    </div>
+                   
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/be2.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Biomedical Engineering Fundametals </p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/be3.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Problems for Biomedical Fluid Mechanics and Transport Phenomena</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/be4.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">The Biomedical Engineering Handbook</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="borrow.html"><img src="img/books/be5.jpg" class="card-img-top rounded-0" height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Biomedical instrumentation</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/PAP1.jpeg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Fundamentals of Pap Test Cytology</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/PAP2.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Plagiarism In Higher Education</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/PAP3.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Academic Practice </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/CS_1.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Computer Hardware</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/CS2.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Discrete Mathematics</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/CS3.png" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Computer Science</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/CS4.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Computer Networking</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/CS5.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Operating System</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/M1.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Principles of Management</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/M2.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">The Making of a Manager</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/M3.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Effective Management</p>
+                        </div>
+                    </div>
+    
+                    <div class="card border-0 rounded-0" style="width: 160px;">
+                        <a href="../borrow.html"><img src="img/books/M4.jpg" class="card-img-top rounded-0"
+                                height="255"></a>
+                        <div class="card-body">
+                            <p class="card-title lead fs-6">Management For Beginners</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- pagination -->
+        <nav aria-label="Page navigation example" class="mt-4">
+            <ul class="pagination d-flex justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
